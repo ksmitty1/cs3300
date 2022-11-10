@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.4"
+gem 'rspec-rails`, github: 'rspec/rspec-rails', branch: 'rails-6-1-dev''
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -37,7 +37,7 @@ gem "jbuilder"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
-
+gem 'tzinfo-data'
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
