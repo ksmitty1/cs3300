@@ -34,13 +34,13 @@ RSpec.describe Project, type: :model do
   context "scopes tests" do
     let(:params) { { title: "Title", description: "some description" } }
     before(:each) do
-      Projects.create(params)
-      Projects.create(params)
-      Projects.create(params)
+      Project.create(params)
+      Project.create(params)
+      Project.create(params)
     end
 
     it "should return all projects" do
-      expect(Projects.count).to eq(3)
+      expect(Project.count).to eq(3)
     end
 
   end
