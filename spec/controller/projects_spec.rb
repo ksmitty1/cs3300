@@ -1,5 +1,12 @@
 require "rails_helper"
 
+FactoryBot.define do
+  factory :user do
+    email { 'test@example.com' }
+    password { 'password1' }
+  end
+end
+
 RSpec.describe ProjectsController, type: :controller do
   context "GET #index" do
     it "returns a success response" do
@@ -38,15 +45,16 @@ RSpec.feature "Projects", type: :feature do
       end
     end
 
-    scenario "should be successful" do
+    scenario "should fail" do
+      visit new_project_path
       fill_in "Description", with: "Test description"
       click_button "Create Project"
-      expect(page).to have_content("Project was successfully created")
+      expect(page).to have_content("Log in")
     end
 
     scenario "should fail" do
       click_button "Create Project"
-      expect(page).to have_content("Description can't be blank")
+      expect(page).to have_content("Log in")
     end
   end
 
@@ -61,7 +69,7 @@ RSpec.feature "Projects", type: :feature do
         fill_in "Description", with: "New description content"
       end
       click_button "Update Project"
-      expect(page).to have_content("Project was successfully updated")
+      expect(page).to have_content("Log in")
     end
 
     scenario "should fail" do
@@ -69,7 +77,7 @@ RSpec.feature "Projects", type: :feature do
         fill_in "Description", with: ""
       end
       click_button "Update Project"
-      expect(page).to have_content("Description can't be blank")
+      expect(page).to have_content("Log in")
     end
   end
 
@@ -78,8 +86,8 @@ RSpec.feature "Projects", type: :feature do
     scenario "remove project" do
       visit project_path(project)
       click_button "Destroy this project"
-      expect(page).to have_content("Project was successfully destroyed")
-      expect(Project.count).to eq(0)
+      expect(page).to have_content("Log in")
+      expect(Project.count).to eq(1)
     end
   end
 end
