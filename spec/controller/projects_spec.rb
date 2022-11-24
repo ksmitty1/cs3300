@@ -63,22 +63,6 @@ RSpec.feature "Projects", type: :feature do
     before(:each) do
       visit edit_project_path(project)
     end
-
-    scenario "should be successful" do
-      within("form") do
-        fill_in "Description", with: "New description content"
-      end
-      click_button "Update Project"
-      expect(page).to have_content("Log in")
-    end
-
-    scenario "should fail" do
-      within("form") do
-        fill_in "Description", with: ""
-      end
-      click_button "Update Project"
-      expect(page).to have_content("Log in")
-    end
   end
 
   context "Remove existing project" do
