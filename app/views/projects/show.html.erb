@@ -2,9 +2,15 @@
 
 <%= render @project %>
 
+<style type="text/css">
+   body { background: grey !important; } 
+</style>
+
 <div>
+
   <%= link_to "Edit this project", edit_project_path(@project) %> |
   <%= link_to "Back to projects", projects_path %>
-
   <%= button_to "Destroy this project", @project, method: :delete %>
 </div>
+
+<img src="http://clipart-library.com/clip-art/dragon-clipart-transparent-background-14.htm" class="img-fluid">

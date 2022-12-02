@@ -5,6 +5,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'devise'
 
 gem 'bootstrap', '~> 5.2.2'
+gem 'rails_bootstrap_navbar'
+gem 'jquery-rails'
+gem "bootswatch", github: "thomaspark/bootswatch"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
@@ -82,3 +85,5 @@ group :test do
   gem "simplecov", require:false
 end
 
+
+gem "cssbundling-rails", "~> 1.1"

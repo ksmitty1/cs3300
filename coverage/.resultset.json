@@ -274,7 +274,7 @@
           null,
           null,
           1,
-          null,
+          1,
           null,
           null,
           null,
@@ -685,7 +685,7 @@
           null,
           null,
           null,
-          null,
+          1,
           1,
           1,
           1,
@@ -902,6 +902,17 @@
         "branches": {
         }
       },
+      "/root/cs3300/app/controllers/index_controller.rb": {
+        "lines": [
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
       "/root/cs3300/app/jobs/application_job.rb": {
         "lines": [
           0,
@@ -926,6 +937,6 @@
         }
       }
     },
-    "timestamp": 1669268775
+    "timestamp": 1669961261
   }
 }
